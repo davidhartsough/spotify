@@ -1,6 +1,7 @@
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
+  pathPrefix: "/spotify",
   siteMetadata: {
     title: "Dave's Faves on Spootify",
     siteName: "Dave's Faves on Spootify",
