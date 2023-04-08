@@ -14,22 +14,7 @@ const config: GatsbyConfig = {
     imageAlt: "Spootify logo",
   },
   graphqlTypegen: true,
-  plugins: [
-    "gatsby-plugin-google-gtag",
-    "gatsby-plugin-sitemap",
-    /*
-    "gatsby-plugin-catch-links",
-    "gatsby-transformer-remark",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: "./src/pages/",
-      },
-      __key: "pages",
-    },
-    */
-  ],
+  plugins: [],
 };
 
 export default config;

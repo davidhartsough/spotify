@@ -1,4 +1,5 @@
 import React from "react";
+import "./item.css";
 
 export default function Item({
   id,
@@ -9,7 +10,7 @@ export default function Item({
   id: string;
   url: string;
   name: string;
-  detail: any;
+  detail?: any;
 }) {
   return (
     <div className="item">

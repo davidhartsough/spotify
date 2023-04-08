@@ -1,21 +1,12 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 
 export default function HeadMeta({ page }: { page: string }) {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          baseUrl
-          keywords
-          image
-          imageAlt
-          siteName
-        }
-      }
-    }
-  `);
-  const { baseUrl, keywords, image, imageAlt, siteName } = data;
+  const siteName = "Dave's Faves on Spootify";
+  const baseUrl = "https://davidhartsough.com/spotify";
+  const keywords =
+    "David,Dave,spotify,spootify,music,artist,albums,playlists,mixes";
+  const image = "spootify.png";
+  const imageAlt = "Spootify logo";
   const title =
     page === "home"
       ? "Dave's Faves on Spootify"
@@ -25,12 +16,6 @@ export default function HeadMeta({ page }: { page: string }) {
   const description = `Check out all of Dave's Fav${fav} on Spootify!`;
   return (
     <>
-      <meta charSet="utf-8" />
-      <meta
-        name="viewport"
-        content="width=device-width,minimum-scale=1,initial-scale=1,shrink-to-fit=no"
-      />
-
       <title>{title}</title>
       <meta property="og:title" content={title} />
       <meta property="og:url" content={url} />
@@ -49,20 +34,33 @@ export default function HeadMeta({ page }: { page: string }) {
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="/apple-touch-icon.png"
+        href={`${baseUrl}/apple-touch-icon.png`}
       />
       <link
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href="/favicon-32x32.png"
+        href={`${baseUrl}/favicon-32x32.png`}
       />
       <link
         rel="icon"
         type="image/png"
         sizes="16x16"
-        href="/favicon-16x16.png"
+        href={`${baseUrl}/favicon-16x16.png`}
       />
+      <link
+        rel="mask-icon"
+        href={`${baseUrl}/safari-pinned-tab.svg`}
+        color="#1ed761"
+      />
+      <meta name="msapplication-TileColor" content="#00a300" />
+      <meta name="theme-color" content="#2e2e2e" />
+      <link
+        rel="sitemap"
+        type="application/xml"
+        href={`${baseUrl}/sitemap.xml`}
+      />
+      <link rel="manifest" href={`${baseUrl}/site.webmanifest`} />
     </>
   );
 }

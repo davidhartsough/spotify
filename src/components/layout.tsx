@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-
 import "./layout.css";
 
 export default function Layout({ children }: { children: React.ReactNode }) {

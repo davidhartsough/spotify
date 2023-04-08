@@ -4,7 +4,6 @@ import HeadMeta from "../components/HeadMeta";
 import List from "../components/list";
 import albums from "../data/albums";
 
-// `https://open.spotify.com/album/${id}`
 export default function Albums() {
   return (
     <Layout>

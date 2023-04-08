@@ -1,9 +1,8 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Item from "./item";
-import type { Artist, Album } from "../types";
+import Button from "./button";
 import { shuffle } from "./utils";
-
+import type { Artist, Album } from "../types";
 import "./list.css";
 
 export default function List({
@@ -35,12 +34,8 @@ export default function List({
           />
         ))}
       </div>
-      <div>
-        <button onClick={reshuffle}>Shuffle</button>
-      </div>
-      <div>
-        <button onClick={showAll}>Show All</button>
-      </div>
+      <Button onClick={reshuffle} text="Shuffle" />
+      <Button onClick={showAll} text="Show All" />
     </div>
   );
 }

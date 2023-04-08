@@ -4,7 +4,6 @@ import HeadMeta from "../components/HeadMeta";
 import Playlists from "../components/playlists";
 import mixes from "../data/mixes";
 
-// `https://open.spotify.com/playlist/${id}`
 export default function Mixes() {
   return (
     <Layout>

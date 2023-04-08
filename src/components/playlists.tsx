@@ -1,27 +1,18 @@
 import React from "react";
-import { Mix } from "../types";
-
+import Item from "./item";
+import type { Mix } from "../types";
 import "./list.css";
-import "./item.css";
-import "./mixes.css";
 
 const url = "https://open.spotify.com/playlist/";
 
 export default function Playlists({ mixes }: { mixes: Mix[] }) {
   return (
-    <div className="list mixes">
-      {mixes.map(({ id, name }) => (
-        <div className="item" key={id}>
-          <a
-            href={`${url}${id}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="a-link"
-          >
-            <p className="a-name">{name}</p>
-          </a>
-        </div>
-      ))}
+    <div className="mixes">
+      <div className="list">
+        {mixes.map(({ id, name }) => (
+          <Item key={id} id={id} name={name} url={url} />
+        ))}
+      </div>
     </div>
   );
 }
