@@ -27,3 +27,36 @@ a {
   text-decoration: none;
   color: #3df;
 }
+
+nav {
+  text-align: center;
+  display: flex;
+}
+.nav-item {
+  flex: 1 1 calc(100% / 3);
+  padding: 0.125rem;
+}
+.nav-link {
+  display: block;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: background-color 0.5s;
+}
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.nav-link.active {
+  background-color: transparent;
+  color: #0f8;
+  letter-spacing: 0.025rem;
+  font-weight: 500;
+}
+
+section {
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  max-width: 64rem;
+}

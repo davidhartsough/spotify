@@ -1,4 +1,4 @@
-export function shuffle(arr: any[]): any[] {
+export default function shuffle(arr) {
   return arr
     .map((value) => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
